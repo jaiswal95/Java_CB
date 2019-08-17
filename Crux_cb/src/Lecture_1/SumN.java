@@ -1,9 +1,11 @@
+package Lecture_1;
+
 import java.util.Scanner;
 
 public class SumN {
 
 	public static void main(String[] args) {
-		System.out.print("Enter the Value of n: ");
+
 		Scanner scn = new Scanner(System.in);
 
 		int n = scn.nextInt();

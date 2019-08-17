@@ -1,7 +1,9 @@
+package Lecture_1;
+
 import java.util.Scanner;
 
 
-public class Prime3 {
+public class Prime_way3 {
 
 	public static void main(String[] args) {
 
