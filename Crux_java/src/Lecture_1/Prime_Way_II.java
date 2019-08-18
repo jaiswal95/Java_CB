@@ -2,33 +2,25 @@ package Lecture_1;
 
 import java.util.Scanner;
 
-
-public class Prime_way3 {
+public class Prime_Way_II {
 
 	public static void main(String[] args) {
-
+		
 		Scanner scn = new Scanner(System.in);
-
 		int n = scn.nextInt();
-
-		int fact = 0;
-
-		int div = 1;
-
-		while (div <= n) {
-
-			if (n % div == 0) {
+		int fact =0;
+		int count=1;
+		while(count<=n) {
+			if(n%count==0) {
 				fact++;
+			
 			}
-
-			div = div + 1;
+			count++;
 		}
-
-		if (fact == 2) {
+		if(fact==2) 
 			System.out.println("Prime");
-		} else {
+		else
 			System.out.println("Not Prime");
-		}
 
 	}
 
