@@ -9,7 +9,7 @@ public class Reverse {
 		long n = scn.nextInt();
 		long ans = 0;
 		while (n != 0) {
-			long  remainder = n % 10;
+			long remainder = n % 10;
 			ans = ans * 10 + remainder;
 			n = n / 10;
 
