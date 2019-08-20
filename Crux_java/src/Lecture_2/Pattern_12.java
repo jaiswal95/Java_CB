@@ -1,7 +1,13 @@
 /*
 
+5
+        * 
+      * ! * 
+    * ! * ! * 
+  * ! * ! * ! * 
+* ! * ! * ! * ! * 
 
- 
+
  */
 
 package Lecture_2;
@@ -27,7 +33,7 @@ public class Pattern_12 {
 			// Work
 			int cst = 0;
 			while (cst < nst) {
-				if (cst % 2 <= 0)
+				if (cst % 2 == 0)
 					System.out.print("* ");
 				else
 					System.out.print("! ");
