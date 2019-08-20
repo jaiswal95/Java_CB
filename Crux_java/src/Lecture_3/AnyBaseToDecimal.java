@@ -19,7 +19,6 @@ public class AnyBaseToDecimal {
 		}
 		System.out.println(ans);
 
-
 	}
 
 }

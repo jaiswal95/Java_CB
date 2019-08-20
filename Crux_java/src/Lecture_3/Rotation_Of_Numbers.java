@@ -21,18 +21,18 @@ public class Rotation_Of_Numbers {
 
 		// Rotation logic
 		rot = rot % nod; // Minimize the value of rotation.
-		
+
 		if (rot < 0) {
 			rot = rot + nod; // Loop for -ve rotation.
 		}
-		
+
 		for (int i = 0; i < rot; i++) {
 			int Last_Digit = n % 10;
 			int Quotient = n / 10;
 			int Start = (int) Math.pow(10, nod - 1);
 
 			ans = Last_Digit * Start + Quotient;
-			n = ans;    //Update the value of n.
+			n = ans; // Update the value of n.
 		}
 		System.out.println(ans);
 	}
