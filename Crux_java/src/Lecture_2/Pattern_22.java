@@ -9,9 +9,6 @@
  
  */
 
-
-
-
 package Lecture_2;
 
 import java.util.Scanner;
@@ -34,7 +31,6 @@ public class Pattern_22 {
 			// Stars
 			int cst = 1;
 			while (cst <= nst) {
-				// if(cst!=nst)
 				System.out.print("* ");
 				cst++;
 			}
