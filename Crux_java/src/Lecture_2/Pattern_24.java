@@ -30,7 +30,7 @@ public class Pattern_24 {
 				csp++;
 			}
 
-			// Work
+			// Numbering
 			int cst = 1;
 			while (cst <= nst) {
 				System.out.print(row+" ");
