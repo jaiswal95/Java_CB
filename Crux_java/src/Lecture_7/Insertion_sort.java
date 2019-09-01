@@ -1,15 +1,15 @@
-package Lecture_6;
+package Lecture_7;
 
 import java.util.Scanner;
 
-public class Bubble_sort {
+public class Insertion_sort {
 
 	static Scanner scn = new Scanner(System.in);
 
 	public static void main(String[] args) {
 		int[] arr = takeInput();
-		bubblesort(arr);
-		display(arr);
+		Insertionsort(arr);
+		 display(arr);
 
 	}
 
@@ -37,18 +37,22 @@ public class Bubble_sort {
 
 	}
 
-	public static void bubblesort(int[] arr) {
-		for (int count = 0; count <= arr.length - 2; count++) {
+	public static void Insertionsort(int[] arr) {
 
-			for (int j = 0; j <= arr.length - count - 2; j++) {
+		for (int count = 1; count <= arr.length - 1; count++) {
 
-				if (arr[j] > arr[j + 1]) {
+			// Capturing the value.
+			int temp = arr[count];
 
-					int temp = arr[j];
-					arr[j] = arr[j + 1];
-					arr[j + 1] = temp;
-				}
+			// Shifting
+			int j = count - 1;
+			while (j >= 0 && arr[j] > temp) {
+				arr[j + 1] = arr[j];
+				j--;
 			}
+			arr[j + 1] = temp;
 		}
+
 	}
+
 }

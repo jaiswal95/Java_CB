@@ -1,15 +1,15 @@
-package Lecture_6;
+package Lecture_7;
 
 import java.util.Scanner;
 
-public class Bubble_sort {
+public class Selection_sort {
 
 	static Scanner scn = new Scanner(System.in);
 
 	public static void main(String[] args) {
 		int[] arr = takeInput();
-		bubblesort(arr);
-		display(arr);
+		SelectionSort(arr);
+		// display(arr);
 
 	}
 
@@ -37,18 +37,26 @@ public class Bubble_sort {
 
 	}
 
-	public static void bubblesort(int[] arr) {
+	public static void SelectionSort(int[] arr) {
+
 		for (int count = 0; count <= arr.length - 2; count++) {
 
-			for (int j = 0; j <= arr.length - count - 2; j++) {
+			int min = count;
 
-				if (arr[j] > arr[j + 1]) {
+			for (int j = count + 1; j <= arr.length - 1; j++) {
 
-					int temp = arr[j];
-					arr[j] = arr[j + 1];
-					arr[j + 1] = temp;
+				if (arr[j] < arr[min]) {
+
+					min = j;
+
 				}
 			}
+			// Swapping
+			int temp = arr[count];
+			arr[count] = arr[min];
+			arr[min] = temp;
+
 		}
 	}
+
 }
