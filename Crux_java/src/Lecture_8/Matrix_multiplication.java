@@ -6,7 +6,18 @@ public class Matrix_multiplication {
 		int[][] one = { { 1, 2, 3 }, { 4, 5, 6 } };
 		int[][] two = { { 1, 2 }, { 3, 4 }, { 5, 6 } };
 		int[][] res = MatrixMultiplication(one, two);
+		display(res);
 
+	}
+	public static void display(int[][] arr) {
+
+		for (int r = 0; r < arr.length; r++) {
+			for (int c = 0; c < arr[r].length; c++) {
+				System.out.print(arr[r][c] + " ");
+			}
+
+			System.out.println();
+		}
 	}
 
 	public static int[][] MatrixMultiplication(int[][] one, int[][] two) {
