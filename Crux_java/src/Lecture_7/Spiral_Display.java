@@ -23,7 +23,7 @@ public class Spiral_Display {
 		while (count < nel) {
 
 			// First col
-			for (int r = minRow; r <= minRow && count < nel; r++) {
+			for (int r = minRow; r <= maxRow && count < nel; r++) {
 
 				System.out.print(arr[r][minCol] + " ");
 				count++;
@@ -52,6 +52,7 @@ public class Spiral_Display {
 				System.out.print(arr[minRow][c] + " ");
 				count++;
 			}
+			minRow++;
 
 		}
 
