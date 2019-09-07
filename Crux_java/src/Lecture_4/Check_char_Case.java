@@ -2,7 +2,7 @@ package Lecture_4;
 
 import java.util.Scanner;
 
-public class Check_char {
+public class Check_char_Case {
 
 	public static void main(String[] args) {
 
