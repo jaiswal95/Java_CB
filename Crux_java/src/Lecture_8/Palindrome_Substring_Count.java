@@ -18,7 +18,6 @@ public class Palindrome_Substring_Count {
 	}
 
 	public static void printChar(String str) {
-
 		for (int i = 0; i < str.length(); i++) {
 			System.out.println(str.charAt(i));
 		}
@@ -26,6 +25,7 @@ public class Palindrome_Substring_Count {
 
 	public static boolean palindrome(String str) {
 
+		// 2 pointer Approach
 		int i = 0;
 		int j = str.length() - 1;
 		while (i <= j) {
