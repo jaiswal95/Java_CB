@@ -4,10 +4,10 @@ public class FormBiggest_number {
 	
 	public static void main(String[] args) {
 		
-		int[] arr = {8,899,857,86,897,889};
+		int[] arr = {8, 85, 89, 889, 897, 899, 859} ;
 		Sorting(arr);
 		for (int val : arr) {
-			System.out.print(val);
+			System.out.print(val+" ");
 		}
 		
 	}
