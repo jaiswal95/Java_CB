@@ -29,11 +29,14 @@ public class DisplayArray_ByRecursion {
 		if (Virtual_idx == arr.length) {
 			return;
 		}
-		// Self work
-		System.out.println(arr[Virtual_idx]);
 		
 		// Samller Problem
 		Display_Array(arr, Virtual_idx + 1);
+		
+		// Self work
+		System.out.println(arr[Virtual_idx]);
+		
+		
 
 	}
 

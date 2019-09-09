@@ -7,7 +7,7 @@ public class FormBiggest_number {
 		int[] arr = {8, 85, 89, 889, 897, 899, 859} ;
 		Sorting(arr);
 		for (int val : arr) {
-			System.out.print(val+" ");
+			System.out.print(val);
 		}
 		
 	}
