@@ -7,8 +7,10 @@ public class Subarray_Of_Array {
 
 	public static void main(String[] args) {
 		int[] arr = takeInput();
-		Subarray(arr);
-//		display(arr);
+		// Subarray(arr);
+		// display(arr);
+		SubarraySum2loops(arr);
+		// LongestSubarraySum(arr);
 
 	}
 
@@ -45,11 +47,53 @@ public class Subarray_Of_Array {
 				for (int k = si; k <= ei; k++) {
 					System.out.print(arr[k] + " ");
 				}
-			
+
 				System.out.println();
 			}
 
 		}
+	}
+
+	public static void SubarraySum2loops(int[] arr) {
+		int max = Integer.MIN_VALUE;
+
+		for (int si = 0; si <= arr.length - 1; si++) {
+			int sum = 0;
+
+			for (int ei = si; ei <= arr.length - 1; ei++) {
+
+				sum += arr[ei];
+
+				// System.out.println(si + " " + ei + ":" + sum);
+
+				if (sum > max) {
+					max = sum;
+				}
+			}
+
+		}
+		System.out.println(max);
+	}
+
+	public static void LongestSubarraySum(int[] arr) {
+		int maxlength = 0;
+
+		for (int si = 0; si <= arr.length - 1; si++) {
+			int sum = 0;
+
+			for (int ei = si; ei <= arr.length - 1; ei++) {
+
+				sum += arr[ei];
+
+				// System.out.println(si + " " + ei + ":" + sum);
+
+				if (sum >= 0) {
+					maxlength = Math.max(maxlength, ei - si + 1);
+				}
+			}
+
+		}
+		System.out.println(maxlength);
 	}
 
 }
