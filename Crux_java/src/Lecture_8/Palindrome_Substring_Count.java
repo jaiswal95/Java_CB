@@ -10,10 +10,10 @@ public class Palindrome_Substring_Count {
 
 		String str = scn.next();
 		printChar(str);
-		substrings(str);
+		//substrings(str);
 		System.out.println(palindrome(str));
-		int res = countPalindrome_Substring(str);
-		System.out.println(res);
+		//int res = countPalindrome_Substring(str);
+		//System.out.println(res);
 
 	}
 
