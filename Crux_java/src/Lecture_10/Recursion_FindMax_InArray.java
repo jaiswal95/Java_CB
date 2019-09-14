@@ -1,16 +1,14 @@
-package Lecture_9;
+package Lecture_10;
 
 import java.util.Scanner;
 
-public class DisplayArray_ByRecursion {
-
+public class Recursion_FindMax_InArray {
 	static Scanner scn = new Scanner(System.in);
 
 	public static void main(String[] args) {
 
 		int[] arr = takeInput();
-
-		// Display_Array(arr, 0);
+		System.out.println(max(arr, 0));
 
 	}
 
@@ -24,18 +22,18 @@ public class DisplayArray_ByRecursion {
 		return arr;
 	}
 
-	public static void Display_Array(int[] arr, int Virtual_idx) {
+	public static int max(int[] arr, int V_idx) {
 
 		// Base case
-		if (Virtual_idx == arr.length) {
-			return;
+		if (V_idx == arr.length - 1) {
+			return arr[V_idx];
 		}
 
-		// Samller Problem
-		Display_Array(arr, Virtual_idx + 1);
+		// Smaller Problem
+		int sp = max(arr, V_idx + 1);
 
-		// Self work
-		System.out.println(arr[Virtual_idx]);
+		// Self Work
+		return Math.max(sp, arr[V_idx]);
 
 	}
 
