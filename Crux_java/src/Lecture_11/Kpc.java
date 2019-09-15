@@ -16,7 +16,7 @@ public class Kpc {
 		// Base case
 		if (str.length() == 0) {
 			ArrayList<String> br = new ArrayList<>();
-			br.add("");
+			br.add("\n");
 			return br;
 		}
 
