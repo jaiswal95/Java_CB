@@ -7,8 +7,10 @@ public class Board_path {
 	static Scanner scn = new Scanner(System.in);
 
 	public static void main(String[] args) {
-
-		System.out.println(Path_2(0, 10));
+		int Current=scn.nextInt();
+		int End=scn.nextInt();
+		//System.out.println(Path_2(Current,End));
+		Path_3(Current,End,"");
 
 	}
 
@@ -55,6 +57,24 @@ public class Board_path {
 			}
 		}
 		return mr;
+	}
+
+	public static void Path_3(int Current, int End, String ans) {
+
+		// Base Case
+		if (Current == End) {
+			System.out.println(ans);
+			return;
+		}
+		if (Current > End) {
+			return;
+		}
+
+		for (int dice = 1; dice <= 6; dice++) {
+			Path_3(Current + dice, End, ans+dice);
+
+		}
+
 	}
 
 }

@@ -8,7 +8,8 @@ public class LetterCase_Permutation {
 
 	public static void main(String[] args) {
 		String str = scn.next();
-		System.out.println(LowerUpper(str));
+		// System.out.println(LowerUpper(str));
+		LowerUpper_1(str, "");
 
 	}
 
@@ -41,6 +42,25 @@ public class LetterCase_Permutation {
 			}
 		}
 		return mr;
+	}
+
+	public static void LowerUpper_1(String str, String ans) {
+		
+		if (str.length() == 0) {
+			System.out.println(ans);
+			return;
+		}
+		char ch = str.charAt(0);
+		String ros = str.substring(1);
+
+		if (Character.isDigit(ch)) {
+
+			LowerUpper_1(ros, ans + ch);
+		} else {
+			LowerUpper_1(ros, ans + Character.toLowerCase(ch));
+			LowerUpper_1(ros, ans + Character.toUpperCase(ch));
+
+		}
 	}
 
 }

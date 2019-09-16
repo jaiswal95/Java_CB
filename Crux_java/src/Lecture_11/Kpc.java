@@ -5,10 +5,11 @@ import java.util.Scanner;
 
 public class Kpc {
 	static Scanner scn = new Scanner(System.in);
+
 	public static void main(String[] args) {
-		String str =scn.next();
-		System.out.println(getKpc(str));
-		
+		String str = scn.next();
+		//System.out.println(getKpc(str));
+		getKpc_1(str,"");
 
 	}
 
@@ -30,13 +31,32 @@ public class Kpc {
 		ArrayList<String> mr = new ArrayList<>();
 
 		String code = getcode(ch);
-		
-		for(int i=0;i<code.length();i++) {
-			for(String val:rr) {
-				mr.add(code.charAt(i)+val);
+
+		for (int i = 0; i < code.length(); i++) {
+			for (String val : rr) {
+				mr.add(code.charAt(i) + val);
 			}
 		}
 		return mr;
+
+	}
+
+	public static void getKpc_1(String str, String ans) {
+		// Base Case
+		if (str.length() == 0) {
+			System.out.println(ans);
+			return;
+		}
+
+		char ch = str.charAt(0);
+		String ros = str.substring(1);
+
+		String code = getcode(ch);
+
+		for (int i = 0; i < code.length(); i++) {
+			getKpc_1(ros, ans + code.charAt(i));
+		}
+		
 
 	}
 

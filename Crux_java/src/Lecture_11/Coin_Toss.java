@@ -8,7 +8,8 @@ public class Coin_Toss {
 
 	public static void main(String[] args) {
 		int n = scn.nextInt();
-		System.out.println(GetCoin_Toss(n));
+		// System.out.println(GetCoin_Toss(n));
+		GetCoin_Toss(n, "");
 
 	}
 
@@ -31,6 +32,18 @@ public class Coin_Toss {
 
 		}
 		return mr;
+	}
+
+	public static void GetCoin_Toss(int n, String ans) {
+		// Base case
+		if (n == 0) {
+			System.out.println(ans);
+			return;
+		}
+
+		GetCoin_Toss(n - 1, ans + "H");
+		GetCoin_Toss(n - 1, ans + "T");
+
 	}
 
 }
