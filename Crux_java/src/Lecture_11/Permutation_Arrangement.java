@@ -7,8 +7,9 @@ public class Permutation_Arrangement {
 	static Scanner scn = new Scanner(System.in);
 
 	public static void main(String[] args) {
-		String str=scn.next();
-		System.out.println(Arrangement(str));
+		String str = scn.next();
+		// System.out.println(Arrangement(str));
+		Arrangement2(str, "");
 
 	}
 
@@ -35,6 +36,36 @@ public class Permutation_Arrangement {
 
 		}
 		return mr;
+	}
+
+	public static void Arrangement1(String str, String ans) {
+		// Base case
+		if (str.length() == 0) {
+			System.out.println(ans);
+			return;
+		}
+		for (int i = 0; i < str.length(); i++) {
+			char ch = str.charAt(i);
+			String ros = str.substring(0, i) + str.substring(i + 1);
+
+			Arrangement1(ros, ans + ch);
+
+		}
+	}
+
+	public static void Arrangement2(String str, String ans) {
+		// Base case
+		if (str.length() == 0) {
+			System.out.println(ans);
+			return;
+		}
+		char ch = str.charAt(0);
+		String ros = str.substring(1);
+		for (int i = 0; i <= ans.length(); i++) {
+
+			Arrangement2(ros, ans.substring(0, i) + ch + ans.substring(i));
+
+		}
 	}
 
 }

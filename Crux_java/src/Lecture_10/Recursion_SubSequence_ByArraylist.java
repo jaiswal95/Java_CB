@@ -8,8 +8,10 @@ public class Recursion_SubSequence_ByArraylist {
 
 	public static void main(String[] args) {
 		String str = scn.next();
-		System.out.println(GetSubSequence(str));
-		System.out.println(GetSubSeque(str));
+		//System.out.println(GetSubSequence(str));
+		//System.out.println(GetSubSequeVal(str));
+		sp(str,"");
+		
 	}
 
 	public static ArrayList<String> GetSubSequence(String str) {
@@ -37,7 +39,7 @@ public class Recursion_SubSequence_ByArraylist {
 		return mr;
 	}
 
-	public static ArrayList<String> GetSubSeque(String str) {
+	public static ArrayList<String> GetSubSequeVal(String str) {
 
 		// Base case
 		if (str.length() == 0) {
@@ -51,7 +53,7 @@ public class Recursion_SubSequence_ByArraylist {
 		String ros = str.substring(1);
 
 		// Smaller problem
-		ArrayList<String> rr = GetSubSeque(ros);
+		ArrayList<String> rr = GetSubSequeVal(ros);
 
 		// Self Work
 		ArrayList<String> mr = new ArrayList<>();
@@ -63,6 +65,20 @@ public class Recursion_SubSequence_ByArraylist {
 		}
 
 		return mr;
+	}
+	
+	public static void sp(String str, String ans) {
+		if (str.length() == 0) {
+			System.out.println(ans);
+			return;
+		}
+
+		char ch = str.charAt(0);
+		String ros = str.substring(1);
+
+		sp(ros, ans); // No
+		sp(ros, ans + ch); // Yes
+
 	}
 
 }
