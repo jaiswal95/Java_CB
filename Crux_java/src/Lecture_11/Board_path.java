@@ -7,12 +7,13 @@ public class Board_path {
 	static Scanner scn = new Scanner(System.in);
 
 	public static void main(String[] args) {
-		int Current=scn.nextInt();
-		int End=scn.nextInt();
-		//System.out.println(Path_2(Current,End));
-		Path_3(Current,End,"");
+		int Current = scn.nextInt();
+		int End = scn.nextInt();
+		// System.out.println(Path_2(Current,End));
+		Path_3(Current, End, "");
 
 	}
+	// Recursion Get
 
 	public static ArrayList<String> Path_1(int Current, int End) {
 
@@ -59,6 +60,8 @@ public class Board_path {
 		return mr;
 	}
 
+	// Recursion Print
+
 	public static void Path_3(int Current, int End, String ans) {
 
 		// Base Case
@@ -71,7 +74,7 @@ public class Board_path {
 		}
 
 		for (int dice = 1; dice <= 6; dice++) {
-			Path_3(Current + dice, End, ans+dice);
+			Path_3(Current + dice, End, ans + dice + ",");
 
 		}
 
