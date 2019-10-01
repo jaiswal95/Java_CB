@@ -12,8 +12,8 @@ public class MazePath_Diagonal {
 		int cc = scn.nextInt();
 		int er = scn.nextInt();
 		int ec = scn.nextInt();
-		System.out.println(MazePath(cr, cc, er, ec));
-		//getMazePath_1(cr, cc, er, ec, "");
+		//System.out.println(MazePath(cr, cc, er, ec));
+		getMazePath_1(cr, cc, er, ec, "");
 
 	}
 

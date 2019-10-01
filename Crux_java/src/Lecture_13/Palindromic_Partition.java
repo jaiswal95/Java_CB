@@ -34,11 +34,11 @@ public class Palindromic_Partition {
 
 		for (int i = 1; i <= str.length(); i++) {
 
-			String f_half = str.substring(i);
-			String ros = str.substring(0, i);
+			String f_half = str.substring(0, i);
+			String ros = str.substring(i);
 
-			if (palindrome(ros)) {
-				PP(f_half, ans + ros + " ");
+			if (palindrome(f_half)) {
+				PP(ros, ans + f_half + " ");
 
 			}
 

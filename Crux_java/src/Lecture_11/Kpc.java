@@ -8,8 +8,8 @@ public class Kpc {
 
 	public static void main(String[] args) {
 		String str = scn.next();
-		//System.out.println(getKpc(str));
-		getKpc_1(str,"");
+		System.out.println(getKpc(str));
+		//getKpc_1(str,"");
 
 	}
 
