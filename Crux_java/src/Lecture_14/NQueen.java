@@ -24,7 +24,7 @@ public class NQueen {
 		}
 
 		// Place
-		if (isitsafetoplaceQuuen(board, row, col)) {
+		if (isitsafetoplaceQueen(board, row, col)) {
 			board[row][col] = true;
 			QCrec(board, row ,col+1, tq, qpsf + 1, ans + "{" + row + "-" + col + "} ");
 			board[row][col] = false;
@@ -34,7 +34,7 @@ public class NQueen {
 
 	}
 
-	public static boolean isitsafetoplaceQuuen(boolean[][] board, int row, int col) {
+	public static boolean isitsafetoplaceQueen(boolean[][] board, int row, int col) {
 
 		// Vertically Up
 

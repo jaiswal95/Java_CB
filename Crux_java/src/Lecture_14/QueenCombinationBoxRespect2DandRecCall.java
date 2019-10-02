@@ -3,7 +3,7 @@ package Lecture_14;
 public class QueenCombinationBoxRespect2DandRecCall {
 
 	public static void main(String[] args) {
-		// QC(new boolean[2][3], 0, 0, 2, 0, "");
+		//QC(new boolean[2][3], 0, 0, 2, 0, "");
 		QCrec(new boolean[2][3], 0, 0, 2, 0, "");
 	}
 
