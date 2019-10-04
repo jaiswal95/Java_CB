@@ -1,39 +1,29 @@
 package Lecture_15;
 
-public class K_Queen {
-
+public class NxN_Board_NQueen {
+	
 	public static void main(String[] args) {
-		KQueen(new boolean[4][4], 0, "", 0, 3);
-
+		NQueen(new boolean[4][4], 0, "");
 	}
-
-	static int count = 0;
-
-	public static void KQueen(boolean[][] board, int row, String ans, int qpsf, int tq) {
-
-		if (qpsf == tq) {
-			System.out.println(++count + ". " + ans);
-			return;
-		}
+	static int count =0;
+	public static void NQueen(boolean[][] board, int row, String ans) {
 
 		if (row == board.length) {
+			System.out.println(++count + ". " + ans);
 			return;
 		}
 
 		for (int col = 0; col < board[0].length; col++) {
 
-			if (isitSafeToPlaceQueen(board, row, col)) {
+			if (isItSafeToPlaceQueen(board, row, col)) {
 				board[row][col] = true;
-				KQueen(board, row + 1, ans + "{" + row + "-" + col + "}", qpsf + 1, tq);
+				NQueen(board, row + 1, ans + "{" + row + "-" + col + "}");
 				board[row][col] = false;
 			}
 		}
 
-		KQueen(board, row + 1, ans, qpsf, tq);
-
 	}
-	
-	public static boolean isitSafeToPlaceQueen(boolean[][] board, int row, int col) {
+	public static boolean isItSafeToPlaceQueen(boolean[][] board, int row, int col) {
 
 		// Vertically Up
 
@@ -87,5 +77,6 @@ public class K_Queen {
 
 		return true;
 	}
+
 
 }
