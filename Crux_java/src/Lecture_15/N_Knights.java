@@ -2,7 +2,7 @@ package Lecture_15;
 
 public class N_Knights {
 	public static void main(String[] args) {
-		KnightCombinationBoxRespect2DRecCall(new boolean[2][3], 0, 0, 2, 0, "");
+		KnightCombinationBoxRespect2DRecCall(new boolean[2][2], 0, 0, 2, 0, "");
 	}
 
 	static int count = 0;

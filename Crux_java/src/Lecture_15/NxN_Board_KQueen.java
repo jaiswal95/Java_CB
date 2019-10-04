@@ -1,6 +1,6 @@
 package Lecture_15;
 
-public class K_Queen {
+public class NxN_Board_KQueen {
 
 	public static void main(String[] args) {
 		KQueen(new boolean[4][4], 0, "", 0, 3);
