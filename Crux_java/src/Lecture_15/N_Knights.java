@@ -7,16 +7,16 @@ public class N_Knights {
 
 	static int count = 0;
 
-	public static void KnightCombinationBoxRespect2DRecCall(boolean[][] board, int row, int col, int tq, int qpsf,
+	public static void KnightCombinationBoxRespect2DRecCall(boolean[][] board, int row, int col, int tk, int kpsf,
 			String ans) {
 
-		if (qpsf == tq) {
+		if (kpsf == tk) {
 			System.out.println(++count + ". " + ans);
 			return;
 		}
 
 		if (col == board[0].length) {
-			KnightCombinationBoxRespect2DRecCall(board, row + 1, 0, tq, qpsf, ans);
+			KnightCombinationBoxRespect2DRecCall(board, row + 1, 0, tk, kpsf, ans);
 			return;
 		}
 
@@ -28,12 +28,12 @@ public class N_Knights {
 
 		if (isItSafeToPlaceKnight(board, row, col)) {
 			board[row][col] = true;
-			KnightCombinationBoxRespect2DRecCall(board, row, col + 1, tq, qpsf + 1, ans + "{" + row + "-" + col + "} ");
+			KnightCombinationBoxRespect2DRecCall(board, row, col + 1, tk, kpsf + 1, ans + "{" + row + "-" + col + "} ");
 			board[row][col] = false;
 		}
 
 		// not place
-		KnightCombinationBoxRespect2DRecCall(board, row, col + 1, tq, qpsf, ans);
+		KnightCombinationBoxRespect2DRecCall(board, row, col + 1, tk, kpsf, ans);
 
 	}
 
