@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class TComplexity_Substrings_Palindrome_O_n2 {
 	static Scanner scn = new Scanner(System.in);
+	
 
 	public static void main(String[] args) {
 		String str = scn.next();
