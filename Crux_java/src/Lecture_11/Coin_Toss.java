@@ -9,7 +9,8 @@ public class Coin_Toss {
 	public static void main(String[] args) {
 		int n = scn.nextInt();
 		// System.out.println(GetCoin_Toss(n));
-		GetCoin_Toss(n, "");
+		// GetCoin_Toss(n, "");
+		NoConsecutive_Head(n, "", false);
 
 	}
 
@@ -43,6 +44,22 @@ public class Coin_Toss {
 
 		GetCoin_Toss(n - 1, ans + "H");
 		GetCoin_Toss(n - 1, ans + "T");
+
+	}
+
+	public static void NoConsecutive_Head(int n, String ans, boolean wasLasthead) {
+
+		if (n == 0) {
+			System.out.println(ans);
+			return;
+		}
+		if (wasLasthead) {
+			NoConsecutive_Head(n - 1, ans + "T", false);
+		} else {
+			NoConsecutive_Head(n - 1, ans + "H", true);
+			NoConsecutive_Head(n - 1, ans + "T", false);
+
+		}
 
 	}
 

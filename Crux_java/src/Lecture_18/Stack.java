@@ -2,8 +2,8 @@ package Lecture_18;
 
 public class Stack {
 
-	int[] data;
-	int tos;
+	protected int[] data;
+	protected int tos;
 
 	public Stack() {
 
@@ -64,13 +64,13 @@ public class Stack {
 
 	public void display() {
 
-		System.out.println("----------------");
+		System.out.println("-----------------------------");
 
 		for (int i = tos; i >= 0; i--) {
 			System.out.print(data[i] + " ");
 		}
-		System.out.println("");
-		System.out.println("----------------");
+		System.out.println(".");
+		System.out.println("-----------------------------");
 
 	}
 
