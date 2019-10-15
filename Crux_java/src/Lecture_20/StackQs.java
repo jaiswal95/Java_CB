@@ -27,9 +27,9 @@ public class StackQs {
 		ActualReverse(s, new DymanicStack());
 		s.display();
 
-//	    System.out.println("-------NGE-------");
-//		int[] arr = takeInput();
-//		NextGreaterElement(arr);
+		System.out.println("-------NGE-------");
+		int[] arr = takeInput();
+		NextGreaterElement(arr);
 
 //		System.out.println("-------NGE2-------");
 //		int[] arr = takeInput();
@@ -41,12 +41,12 @@ public class StackQs {
 //		}
 
 		System.out.println("-------Stock Span-------");
-		int[] arr = { 90, 60, 15, 70, 45, 25, 50, 100, 5, 30, 80 };
-		int[] ans = StockSpan(arr);
+		int[] arr1 = { 90, 60, 15, 70, 45, 25, 50, 100, 5, 30, 80 };
+		int[] ans = StockSpan(arr1);
 
 		int i = 0;
 		for (int val : ans) {
-			System.out.println(arr[i++] + " --> " + val);
+			System.out.println(arr1[i++] + " --> " + val);
 		}
 
 	}
